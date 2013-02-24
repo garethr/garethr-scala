@@ -24,7 +24,7 @@ class scala::package {
     'scala',
   ]:
     ensure  => installed,
-    require => Package['typesafe_repo'],
+    require => Exec['apt-update-typesafe'],
   }
 
 }
