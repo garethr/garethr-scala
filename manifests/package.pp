@@ -1,17 +1,17 @@
 class scala::package {
   include wget
 
-  wget::fetch { 'download_typesafe_repo':
+  wget::fetch { 'download-typesafe-repo':
     source      => 'http://apt.typesafe.com/repo-deb-build-0002.deb',
-    destination => "/usr/local/src/repo-deb-build-0002.deb",
-    before      => Exec['install_typesafe_repo'],
+    destination => '/usr/local/src/repo-deb-build-0002.deb',
+    before      => Package['typesafe_repo'],
   }
 
   package { 'typesafe-repo':
     ensure   => installed,
     source   => '/usr/local/src/repo-deb-build-0002.deb',
     provider => dpkg,
-    notify   => Exec["apt-update-typesafe"];
+    notify   => Exec['apt-update-typesafe'];
   }
 
   exec { 'apt-update-typesafe':
@@ -24,7 +24,7 @@ class scala::package {
     'scala',
   ]:
     ensure  => installed,
-    require => Exec['install_typesafe_repo'],
+    require => Package['typesafe_repo'],
   }
 
 }

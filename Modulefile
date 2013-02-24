@@ -1,5 +1,5 @@
 name        'garethr-scala'
-version     '0.0.1'
+version     '0.1.0'
 source      'git://github.com/garethr/garethr-scala.git'
 author      'Gareth Rushgrove'
 summary     'Module for installing typesafe scala'
