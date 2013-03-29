@@ -4,7 +4,7 @@ GEM
     diff-lcs (1.2.1)
     facter (1.6.17)
     metaclass (0.0.1)
-    mocha (0.13.2)
+    mocha (0.13.3)
       metaclass (~> 0.0.1)
     puppet (2.7.20)
       facter (~> 1.5)
@@ -14,7 +14,7 @@ GEM
       rake
       rspec (>= 2.9.0)
       rspec-puppet (>= 0.1.1)
-    rake (10.0.3)
+    rake (10.0.4)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
