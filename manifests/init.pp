@@ -6,7 +6,7 @@ class scala {
   wget::fetch { 'download-typesafe-repo':
     source      => 'http://apt.typesafe.com/repo-deb-build-0002.deb',
     destination => '/usr/local/src/repo-deb-build-0002.deb',
-    before      => Package['typesafe_repo'],
+    before      => Package['typesafe-repo'],
   }
 
   package { 'typesafe-repo':
