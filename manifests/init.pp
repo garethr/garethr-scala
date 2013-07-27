@@ -1,7 +1,12 @@
+# == Class: scala
+#
+# Install scala from the Typesafe repository
+#
 class scala {
   include wget
 
-  validate_re($::osfamily, '^Debian$', 'This module relies on a deb package and only works on Debian based distros')
+  validate_re($::osfamily, '^Debian$', "This module relies on a deb package \
+and only works on Debian based distros")
 
   wget::fetch { 'download-typesafe-repo':
     source      => 'http://apt.typesafe.com/repo-deb-build-0002.deb',
